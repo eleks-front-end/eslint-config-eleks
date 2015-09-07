@@ -1,0 +1,26 @@
+{
+  "name": "eslint-config-eleks",
+  "version": "0.0.0",
+  "description": "Eleks eslint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eleks-front-end/eslint-config-eleks.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eleks",
+    "styleguide",
+    "javascript"
+  ],
+  "author": "Eleks FrontEnd Stream",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eleks-front-end/eslint-config-eleks/issues"
+  },
+  "homepage": "https://github.com/eleks-front-end/eslint-config-eleks#readme"
+}
