@@ -1,5 +1,5 @@
 module.exports = {
-    extends: './base',
+    extends: '@eleks/eleks',
 
     env: {
         es6: true
@@ -35,7 +35,7 @@ module.exports = {
     rules: {
 
         // ES6
-        'arrow-parens': [2, 'as-neede'], // require parens in arrow function arguments
+        'arrow-parens': [2, 'as-needed'], // require parens in arrow function arguments
         'arrow-spacing': [2, {
             'before': true,
             'after': true
