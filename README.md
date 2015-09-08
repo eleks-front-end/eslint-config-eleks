@@ -12,3 +12,7 @@ Then add ```extends: '@eleks/eleks'``` to your ```.eslintrc```
 If your don't have one yet
 
     $ echo "extends: '@eleks/eleks'" >> .eslintrc
+
+### ES6
+
+For **ES6** specific config, add ```extends: '@eleks/eleks/es6'```
