@@ -1,6 +1,6 @@
 module.exports = {
     env: {
-        browser: false, // browser global variables.
+        browser: true, // browser global variables.
         node: false, // Node.js global variables and Node.js scoping.
         commonjs: false, // CommonJS global variables and CommonJS scoping (use this for browse: false, //only code that uses Browserify/WebPack).
         worker: false, // web workers global variables.

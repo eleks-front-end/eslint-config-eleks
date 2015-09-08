@@ -1,6 +1,10 @@
 module.exports = {
     extends: './base',
 
+    env: {
+        es6: true
+    },
+
     ecmaFeatures: {
         'arrowFunctions': true, // enable arrow functions
         'binaryLiterals': true, // enable binary literals
