@@ -51,6 +51,7 @@ module.exports = {
         'no-unreachable': 2,
         'use-isnan': 2,
         'valid-jsdoc': 1,
+        'require-jsdoc': 0,
         'valid-typeof': 2,
         'no-unexpected-multiline': 2,
 
@@ -168,6 +169,7 @@ module.exports = {
             'max': 2
         }],
         'no-nested-ternary': 1,
+        'no-negated-condition': 0,
         'no-new-object': 2,
         'no-spaced-func': 2,
         'no-ternary': 0,
@@ -187,7 +189,8 @@ module.exports = {
         }],
         'semi': [2, 'always'],
         'sort-vars': 0,
-        'space-after-keywords': 2,
+        'space-before-keywords': [2, "always"],
+        'space-after-keywords': [2, "always"],
         'space-before-blocks': [2, 'always'],
         'space-before-function-paren': [2, 'always'],
         'space-in-parens': [2, 'never'],
