@@ -5,7 +5,7 @@ This package provides extensible ESLint config which follows [Eleks Style Guide]
 
 > This version is based on eslint@2.0.0
 
-> In order to use it, you have to must specify the `next` tag when installing:
+> In order to use it, you have to specify the `next` tag when installing:
 
     $ npm install eslint@next --save-dev
 
