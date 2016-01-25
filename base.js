@@ -1,4 +1,7 @@
 module.exports = {
+
+    // Environment should be set by each project explicitly
+    // We're setting only "browser" and "es6"
     env: {
         browser: true, // browser global variables.
         node: false, // Node.js global variables and Node.js scoping.
@@ -17,9 +20,22 @@ module.exports = {
         meteor: false, // Meteor global variables.
         mongo: false, // MongoDB global variables.
         applescript: false, // AppleScript global variables.
+        nashorn: false, // Java 8 Nashorn global variables.
         serviceworker: false, // Service Worker global variables.
         embertest: false, // Ember test helper globals.
-        es6: false // enable all ECMAScript 6 features except for modules.
+        webextensions: false, // WebExtensions globals.
+        es6: true // enable all ECMAScript 6 features except for modules.
+    },
+
+    parserOptions: {
+        ecmaVersion: 6,
+        sourceType: "module",
+
+        ecmaFeatures: {
+            'globalReturn': false, // allow return statements in the global scope
+            'jsx': false, // enable JSX
+            'experimentalObjectRestSpread': true // enable support for the experimental object rest/spread properties (IMPORTANT: This is an experimental feature that may change significantly in the future. It's recommended that you do not write rules relying on this functionality unless you are willing to incur maintenance cost when it changes.)
+        }
     },
 
     rules: {
@@ -48,21 +64,22 @@ module.exports = {
         'no-obj-calls': 2,
         'no-regex-spaces': 1,
         'no-sparse-arrays': 2,
+        'no-unexpected-multiline': 2,
         'no-unreachable': 2,
         'use-isnan': 2,
         'valid-jsdoc': 1,
         'require-jsdoc': 0,
         'valid-typeof': 2,
-        'no-unexpected-multiline': 2,
 
         // Best Practices
         'accessor-pairs': [ 2, {
             'getWithoutSet': true,
             'setWithoutGet': false
         }],
+        'array-callback-return': 2,
         'block-scoped-var': 0,
         'complexity': 0,
-        'consistent-return': 2,
+        'consistent-return': 2, // @ended
         'curly': [2, 'multi'],
         'default-case': 2,
         'dot-notation': [2, {
@@ -73,9 +90,11 @@ module.exports = {
         'guard-for-in': 1,
         'no-alert': 2,
         'no-caller': 2,
+        'no-case-declarations': 2,
         'no-div-regex': 2,
         'no-else-return': 2,
         'no-empty-label': 2,
+        'no-empty-pattern': 2,
         'no-eq-null': 0,
         'no-eval': 2,
         'no-extend-native': 2,
@@ -83,12 +102,14 @@ module.exports = {
         'no-fallthrough': 1,
         'no-floating-decimal': 1,
         'no-implicit-coercion': 0,
+        'no-implicit-globals': 2,
         'no-implied-eval': 2,
         'no-invalid-this': 2,
         'no-iterator': 2,
         'no-labels': 2,
         'no-lone-blocks': 2,
         'no-loop-func': 2,
+        'no-magic-numbers': 1,
         'no-multi-spaces': 2,
         'no-multi-str': 2,
         'no-native-reassign': 2,
@@ -106,6 +127,7 @@ module.exports = {
         'no-self-compare': 2,
         'no-sequences': 1,
         'no-throw-literal': 2,
+        'no-unmodified-loop-condition': 1,
         'no-unused-expressions': 2,
         'no-useless-call': 1,
         'no-useless-concat': 2,
@@ -154,13 +176,19 @@ module.exports = {
             'SwitchCase': 1
         }],
         'key-spacing': 0,
-        'lines-around-comment': 0,
+        'keyword-spacing': 2,
         'linebreak-style': 0,
+        'lines-around-comment': 0,
+        'max-depth': 0,
+        'max-len': 0,
         'max-nested-callbacks': 0,
+        'max-params': 0,
+        'max-statements': 0,
         'new-cap': 2,
         'new-parens': 0,
         'newline-after-var': [1, 'always'],
         'no-array-constructor': 2,
+        'no-bitwise': 0,
         'no-continue': 0,
         'no-inline-comments': 0,
         'no-lonely-if': 1,
@@ -172,6 +200,8 @@ module.exports = {
         'no-negated-condition': 0,
         'no-new-object': 2,
         'no-spaced-func': 2,
+        'no-plusplus': 0,
+        'no-whitespace-before-property': 2,
         'no-ternary': 0,
         'no-trailing-spaces': 2,
         'no-underscore-dangle': 0,
@@ -189,17 +219,46 @@ module.exports = {
         }],
         'semi': [2, 'always'],
         'sort-vars': 0,
-        'space-before-keywords': [2, "always"],
-        'space-after-keywords': [2, "always"],
+        'sort-imports': 0,
         'space-before-blocks': [2, 'always'],
         'space-before-function-paren': [2, 'always'],
+
         'space-in-parens': [2, 'never'],
         'space-infix-ops': [2, {
             'int32Hint': true
         }],
-        'space-return-throw-case': 2,
         'space-unary-ops': 2,
         'spaced-comment': 1,
-        'wrap-regex': 0
+        'wrap-regex': 0,
+
+        // ES6
+        'arrow-body-style': [2, 'as-needed'], //require braces in arrow function body
+        'arrow-parens': [2, 'as-needed'], //require parens in arrow function arguments
+        'arrow-spacing': [2, {
+            'before': true,
+            'after': true
+        }], // require space before/after arrow function's arrow
+        'constructor-super': 2, //verify calls of super() in constructors (recommended)
+        'generator-star-spacing': [2, {
+            'before': true,
+            'after': true
+        }], // enforce spacing around the * in generator functions
+        'no-class-assign': 2, //disallow modifying variables of class declarations (recommended)
+        'no-confusing-arrow': 0, //disallow arrow functions where they could be confused with comparisons
+        'no-const-assign': 2, //disallow modifying variables that are declared using const (recommended)
+        'no-dupe-class-members': 2, //disallow duplicate name in class members (recommended)
+        'no-new-symbol': 2, //disallow use of the new operator with the Symbol object (recommended)
+        'no-this-before-super': 2, //disallow use of this/super before calling super() in constructors (recommended)
+        'no-var': 0, //require let or const instead of var
+        'no-useless-constructor': 1, //disallow unnecessary constructor
+        'object-shorthand': [2, 'always'], // require method and property shorthand syntax for object literals
+        'prefer-arrow-callback': 1, //suggest using arrow functions as callbacks
+        'prefer-const': 1, //suggest using const declaration for variables that are never modified after declared
+        'prefer-reflect': 0, //suggest using Reflect methods where applicable
+        'prefer-rest-params': 0, //suggest using the rest parameters instead of arguments
+        'prefer-spread': 1, //suggest using the spread operator instead of .apply().
+        'prefer-template': 1, //suggest using template literals instead of strings concatenation
+        'require-yield': 2, //disallow generator functions that do not have yield
+        "yield-star-spacing": [2, {"before": true, "after": true}], //enforce spacing around the * in yield* expressions (fixable)
     }
 };
