@@ -5,24 +5,18 @@ This package provides extensible ESLint config which follows [Eleks Style Guide]
 
 > This version is based on eslint@2.0.0
 
-> In order to use it, you have to specify the `next` tag when installing:
-
-    $ npm install eslint@next --save-dev
-
-> or version directly
-
-    $ npm install eslint@2.0.0-beta.2 --save-dev
+> In order to use it, you have to specify the `next` tag when installing.
 
 
 ## Usage
 
-    $ npm install eslint@next @eleks/eslint-config-eleks --save-dev
+    $ npm i -D eslint@next @eleks/eslint-config-eleks@next
 
 Then add ```extends: '@eleks/eleks'``` to your ```.eslintrc.*```
 
 If your don't have one yet
 
-    $ echo "{extends: '@eleks/eleks'}" > .eslintrc.json
+    $ echo "extends: '@eleks/eleks'" > .eslintrc.yml
 
 ### Notice
 
