@@ -93,7 +93,6 @@ module.exports = {
         'no-case-declarations': 2,
         'no-div-regex': 2,
         'no-else-return': 2,
-        'no-empty-label': 2,
         'no-empty-pattern': 2,
         'no-eq-null': 0,
         'no-eval': 2,
