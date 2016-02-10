@@ -14,13 +14,15 @@
     "eslint",
     "eslintconfig",
     "eleks",
-    "styleguide",
-    "javascript"
+    "styleguide"
   ],
   "author": "Eleks FrontEnd Stream",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/eleks-front-end/eslint-config-eleks/issues"
   },
-  "homepage": "https://github.com/eleks-front-end/eslint-config-eleks#readme"
+  "homepage": "https://github.com/eleks-front-end/eslint-config-eleks#readme",
+  "peerDependencies": {
+    "eslint": "^2.0.0-rc.1"
+  }
 }
