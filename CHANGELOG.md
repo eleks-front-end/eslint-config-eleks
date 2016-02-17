@@ -1,3 +1,6 @@
+### 0.1.1
+  * pointless version bump, as 0.1.0 was published on npm by mistake
+
 ### 0.1.0
   * move to eslint@2.1.0
   * add "no-empty-functions"
