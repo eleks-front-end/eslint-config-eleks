@@ -1,3 +1,7 @@
+### 0.1.0
+  * move to eslint@2.1.0
+  * add "no-empty-functions"
+
 ### 0.1.0-beta2
   * move to eslint@2.0.0-rc.1
 
