@@ -109,7 +109,9 @@ module.exports = {
         'no-labels': 2,
         'no-lone-blocks': 2,
         'no-loop-func': 2,
-        'no-magic-numbers': 1,
+        'no-magic-numbers': [1, {
+            'ignore': [-1, 0, 1]
+        }],
         'no-multi-spaces': 2,
         'no-multi-str': 2,
         'no-native-reassign': 2,
