@@ -1,3 +1,6 @@
+### 0.2.1
+  * pointless version bump
+
 ### 0.2.0
   * move to eslint@3
   * add v3 new rules
