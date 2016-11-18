@@ -21,9 +21,9 @@ module.exports = {
   environment: {
     // ...
   },
-  plugins: {
+  plugins: [
     // ...
-  },
+  ],
   rules: {
     // ...
   }
