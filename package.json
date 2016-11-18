@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/eleks-front-end/eslint-config-eleks#readme",
   "peerDependencies": {
-    "eslint": "^2.1.0"
+    "eslint": "3.*"
   }
 }
