@@ -1,6 +1,6 @@
 {
   "name": "@eleks/eslint-config-eleks",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Eleks eslint config",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/eleks-front-end/eslint-config-eleks#readme",
   "peerDependencies": {
-    "eslint": "3.*"
+    "eslint": ">=4.0.0"
   }
 }
